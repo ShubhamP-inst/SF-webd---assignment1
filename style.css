@@ -15,7 +15,7 @@ html {
 
 :root {
     --color_1: #ccff8a;
-    --bg_color: rgb(48, 0, 69);
+    --bg_color: rgb(35, 5, 48);
 }
 
 /* -------------------NAVIGATION BAR-------------------- */
@@ -23,6 +23,7 @@ nav {
     position: fixed;
     width: 100vw;
     display: flex;
+    align-items: center;
     font-weight: 700;
     font-size: 18px;
     color: white;
@@ -45,13 +46,14 @@ span {
     display: flex;
     gap: 40px;
     justify-content: space-around;
-    margin: auto 35px;
+    margin: auto 20px;
     margin-left: auto;
 }
 
 .nav-tabs li {
     border-radius: 2px;
     padding: 10px;
+    text-transform: uppercase;
 }
 
 .nav-tabs li:hover {
@@ -77,15 +79,17 @@ span {
     height: 100vh;
     color: var(--color_1);
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-items: center;
 }
 
 .intro {
-    word-spacing: 5px;
+    box-sizing: border-box;
+    padding: 20px;
     line-height: 80px;
-    margin: auto 40px;
-    /* border: 2px solid red; */
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 .intro>h1,
@@ -96,12 +100,12 @@ button {
 }
 
 .intro>h1 {
-    font-size: 50px;
+    font-size: 40px;
     color: whitesmoke;
 }
 
 .intro>h2 {
-    font-size: 40px;
+    font-size: 30px;
     color: whitesmoke;
 }
 
@@ -119,11 +123,10 @@ button {
 
 .my-image {
     margin-top: 90px;
-    /* border: 2px solid red; */
 }
 
 .my-image>img {
-    height: 555px;
+    height: 530px;
 }
 
 /* -------------------MY PROJECTS-------------------- */
@@ -138,7 +141,7 @@ button {
     font-weight: 900;
     color: white;
     padding: 0px 0px 20px 60px;
-    
+
 }
 
 .project-cards {
@@ -205,10 +208,10 @@ button {
 /* -------------------SKILLS AND ACHIEVEMENTS-------------------- */
 .container-skills {
     display: grid;
-    height: auto;
+    /* height: auto; */
     background-color: var(--bg_color);
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 0.5fr 1.4fr 1fr 1.1fr;
+    grid-template-rows: 70px 1.4fr 1fr 1.1fr;
     padding: 40px;
     gap: 20px;
 }
@@ -225,12 +228,9 @@ button {
 .grid-item0 {
     text-decoration: underline;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    font-weight: 900;
     color: white;
     border: 0px;
     background-color: transparent;
-    padding: 30px;
     grid-column: 1/ span 9;
 }
 
@@ -260,10 +260,11 @@ button {
 }
 
 /* -------------------CONTACT ME-------------------- */
-.container-contact{
+.container-contact {
     position: relative;
     padding: 20px 0px;
 }
+
 .container-contact::before {
     background: url('contact.jpg') no-repeat center center/cover;
     opacity: 0.8;
@@ -275,7 +276,8 @@ button {
     height: 100vh;
     z-index: -1;
 }
-.inner-container-contact{
+
+.inner-container-contact {
     background-color: rgba(0, 0, 0, 0.56);
     border-radius: 10px;
     box-shadow: 0 -8px -32px 0 rgba(31, 38, 135, 0.37);
@@ -286,13 +288,15 @@ button {
     justify-content: center;
     align-items: center;
 }
-.inner-container-contact > h1{
+
+.inner-container-contact>h1 {
     text-decoration: underline;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--color_1);
     padding: 20px 0px;
 }
-.message{
+
+.inner-container-contact>p {
     box-sizing: border-box;
     width: 90%;
     padding: 19px 35px;
@@ -301,54 +305,179 @@ button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     background: rgba(255, 255, 255);
-    box-shadow: inset 0px 0px 189px -82px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 189px -82px rgba(0, 0, 0, 1);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
-form{
+
+.form {
     box-sizing: border-box;
-    width: 90%;
+    width: 95%;
     padding: 15px 30px;
     margin: 5px auto;
-}
-.form{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
 }
-.left-form{
+
+.left-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.left-form > input{
+
+.left-form>input {
     font-family: 'Baloo Bhai', cursive;
     text-align: center;
     padding: 5px;
     margin: 10px auto;
     font-size: 19px;
     background: rgba(255, 255, 255);
-    box-shadow: inset 0px 0px 129px -82px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 129px -82px rgba(0, 0, 0, 1);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.right-form{
+
+.right-form {
     display: flex;
     flex-direction: column;
 }
-.right-form>textarea{
+
+.right-form>textarea {
     padding: 10px;
     margin: 5px auto;
     font-size: 18px;
     background: rgba(255, 255, 255);
-    box-shadow: inset 0px 0px 129px -82px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 129px -82px rgba(0, 0, 0, 1);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.right-form>button{
+
+.right-form>button {
     padding: 5px 18px;
     margin: 7px auto;
     font-size: 17px;
     font-family: 'Baloo Bhai', cursive;
     text-align: center;
     border-radius: 8px;
+}
+
+/* -------------------MEDIA QUERIES-------------------- */
+@media (max-width: 1020px) {
+    nav {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .nav-tabs {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgb(168, 115, 191);
+        transition: all 0.3s;
+    }
+
+    .nav-tabs li {
+        font-size: larger;
+        margin: auto;
+    }
+
+    .intro {
+        font-size: smaller;
+        line-height: 60px;
+        margin-bottom: 50px;
+    }
+
+    .my-image>img {
+        height: 500px;
+    }
+
+    .project-cards {
+        gap: 20px;
+    }
+
+    .grid-item {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 650px) {
+    .intro>h1 {
+        font-size: 30px;
+    }
+
+    .intro>h2 {
+        font-size: 22px;
+    }
+
+    .my-image>img {
+        height: 450px;
+    }
+
+    .container-projects>h1 {
+        font-size: 30px;
+    }
+
+    .container-skills {
+        padding: 15px;
+        gap: 8px;
+        grid-template-columns: repeat(9, auto);
+        grid-template-rows: 70px auto auto auto auto;
+    }
+
+    .grid-item {
+        font-size: 16px;
+    }
+
+    .inner-container-contact {
+        width: 95vw;
+    }
+
+    .left-form>input {
+        margin: 2px 0px;
+    }
+}
+
+@media (max-width: 475px) {
+    .my-image>img {
+        height: 300px;
+    }
+
+    .card {
+        padding: 6px;
+    }
+
+    .grid-item {
+        font-size: 12px;
+    }
+
+    .grid-item0 {
+        font-size: 12px;
+    }
+
+    .inner-container-contact>h1 {
+        padding: 5px 0px;
+    }
+
+    .inner-container-contact>p {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .form {
+        padding: 0px;
+    }
+
+    .left-form>input {
+        padding: 0px;
+        margin: 3px auto;
+        font-size: 16px;
+    }
+
+    .right-form>button {
+        padding: 3px 18px;
+        margin: 5px auto;
+        font-size: 15px;
+    }
 }
